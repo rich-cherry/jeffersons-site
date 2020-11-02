@@ -6,6 +6,7 @@ export const Grid = styled.section`
 
     @media (min-width: 768px){
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
         >div:first-child{
             order: 2;
         }

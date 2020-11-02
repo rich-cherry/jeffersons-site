@@ -1,6 +1,30 @@
 import React from 'react'
 import Image from 'gatsby-image'
+import { ImageGalleryWrapper } from './styles'
+import ImageThumbnail from './ImageThumbnail'
 
 export function ImageGallery({ images }) {
-    return <div><Image fluid={images[0].localFile.childImageSharp.fluid} /></div>
+    const [activeImageThumbnail, setActiveImageThumbnail] = React.useState(images[0])
+
+    const handleClick = (image) => { setActiveImageThumbnail(image) };
+
+    return (
+        <ImageGalleryWrapper>
+            <div>
+                <Image fluid={activeImageThumbnail.localFile.childImageSharp.fluid} />
+            </div>
+            <div>
+                {images.map((image) => {
+                    return (
+                        <ImageThumbnail
+                            key={image.id}
+                            onClick={handleClick}
+                            image={image}
+                            isActive={activeImageThumbnail.id === image.id}
+                        />
+                    )
+                })}
+            </div>
+        </ImageGalleryWrapper>
+    )
 }
