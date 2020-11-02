@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-onchange */
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Layout, ImageGallery } from 'components'
+import { Layout, ImageGallery, ProductQuantityAdder } from 'components'
 import { Grid, SelectWrapper, Price } from './styles'
 import CartContext from 'context/CartContext';
 import { navigate, useLocation } from '@reach/router';
@@ -37,16 +37,25 @@ export default function ProductTemplate(props) {
     React.useEffect(() => {
         getProductById(props.data.shopifyProduct.shopifyId).then((result) => {
             setProduct(result);
-            setSelectedVariant(result.variants.find(({ id }) => id === variantId) || result.variants[0]);
-        })
-    }, [getProductById, setProduct, props.data.shopifyProduct.shopifyId, variantId])
+            setSelectedVariant(
+                result.variants.find(({ id }) => id === variantId) || result.variants[0]
+            );
+        });
+    }, [
+        getProductById,
+        setProduct,
+        props.data.shopifyProduct.shopifyId,
+        variantId
+    ]
+    )
 
     const handleVariantChange = e => {
         const newVariant = product?.variants.find(v => v.id === e.target.value);
         setSelectedVariant(newVariant);
-        navigate(`${origin}${pathname}?variant=${encodeURIComponent(newVariant.id)}`, {
-            replace: true
-        })
+        navigate(`${origin}${pathname}?variant=${encodeURIComponent(newVariant.id)}`,
+            {
+                replace: true
+            })
     };
 
     return (
@@ -57,25 +66,38 @@ export default function ProductTemplate(props) {
                     <p>{props.data.shopifyProduct.description}</p>
                     {product?.availableForSale && !!selectedVariant && (
                         <>
-                            {product.variants.length > 1 &&
+                            {product?.variants.length > 1 && (
                                 <SelectWrapper>
                                     <strong>Variant</strong>
-                                    <select value={selectedVariant.id} onChange={handleVariantChange}>
-                                        {product.variants.map(v => (
+                                    <select
+                                        value={selectedVariant.id}
+                                        onChange={handleVariantChange}
+                                    >
+                                        {product?.variants.map(v => (
                                             <option key={v.id} value={v.id}>
                                                 {v.title}
                                             </option>
                                         ))}
                                     </select>
                                 </SelectWrapper>
-                            }
-                            {!!selectedVariant &&
-                                <Price>${selectedVariant.price}</Price>}
+                            )}
+                            {!!selectedVariant && (
+                                <>
+                                    <Price>£{selectedVariant.price}</Price>
+                                    <ProductQuantityAdder
+                                        available={selectedVariant.available}
+                                        variantId={selectedVariant.id}
+                                    />
+                                </>
+                            )}
                         </>
                     )}
                 </div>
                 <div>
-                    <ImageGallery selectedVariantImageId={selectedVariant?.image.id} images={props.data.shopifyProduct.images} />
+                    <ImageGallery
+                        selectedVariantImageId={selectedVariant?.image.id}
+                        images={props.data.shopifyProduct.images}
+                    />
                 </div>
             </Grid>
         </Layout>
