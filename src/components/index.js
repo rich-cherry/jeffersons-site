@@ -18,3 +18,4 @@ export * from './Search';
 export * from './AnnouncementBar';
 export * from './Intro';
 export * from './Footer';
+export * from './About';
