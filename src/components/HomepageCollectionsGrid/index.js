@@ -23,7 +23,11 @@ export function HomepageCollectionsGrid({ collections }) {
                     backgroundImage={saleCollection.image.localFile.childImageSharp.fluid}
                 />
             )}
-            <RemainingCollections>
+            <RemainingCollections
+                data-sal="fade"
+                data-sal-delay="300"
+                data-sal-duration="1000"
+                data-sal-easing="ease">
                 {remainingCollections.map(collection => (
                     <CollectionTile
                         destination={`/all-products?c=${encodeURIComponent(

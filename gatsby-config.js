@@ -15,6 +15,7 @@ module.exports = {
         typekit: { id: 'fpb3nmo' }
       }
     },
+    `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-styled-components`,
     `gatsby-optional-chaining`,
     {

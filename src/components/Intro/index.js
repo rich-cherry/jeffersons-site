@@ -17,7 +17,12 @@ export function Intro() {
     }
   `);
   return (
-    <IntroWrapper>
+    <IntroWrapper
+      data-sal="fade"
+      data-sal-duration="1000"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+    >
       <div className="introText">
         <h1>Flowers for every occasion.</h1>
         <h4>Located in downtown Greenville, NC. Pickup and Delivery Available. </h4>

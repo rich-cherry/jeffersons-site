@@ -5,7 +5,7 @@ export function Footer() {
     return (
         <FooterWrapper>
             <div className="footerText">
-                <h1>For all the celebrations of lie.</h1>
+                <h1>For all the celebrations of life.</h1>
                 <p>310 West 9th Street</p>
                 <p>Greenville, NC 27834</p>
                 <p>252-355-5600</p>

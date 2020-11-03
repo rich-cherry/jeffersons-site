@@ -17,7 +17,12 @@ export function About() {
     }
   `);
   return (
-    <AboutWrapper>
+    <AboutWrapper
+      data-sal="slide-up"
+      data-sal-delay="300"
+      data-sal-duration="1000"
+      data-sal-easing="ease"
+    >
       <Img fixed={data.file.childImageSharp.fixed} />
       <div className="AboutText">
         <h1>Greenville, NC's premier destination for flowers, wine, gifts.</h1>
