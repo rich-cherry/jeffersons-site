@@ -25,7 +25,7 @@ export function Intro() {
     >
       <div className="introText">
         <h1>Flowers for every occasion.</h1>
-        <h4>Located in downtown Greenville, NC. Pickup and Delivery Available. </h4>
+        <h4>Located in downtown Greenville, NC.<br />Pickup and Delivery Available. </h4>
         <Link className="button" to="/all-products">Shop Now</Link>
       </div>
       <Img fluid={data.file.childImageSharp.fluid} />
