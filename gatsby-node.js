@@ -23,6 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `);
+
   data.allShopifyProduct.edges.forEach(({ node }) => {
     createPage({
       path: `products/${node.handle}`,
@@ -30,6 +31,6 @@ exports.createPages = async ({ graphql, actions }) => {
         shopifyId: node.shopifyId,
       },
       component: path.resolve('./src/templates/ProductTemplate/index.js'),
-    })
-  })
-}
+    });
+  });
+};
