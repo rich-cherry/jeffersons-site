@@ -9,7 +9,7 @@ export function ProductsGrid({ products }) {
                 <ProductTile
                     handle={product.handle}
                     minPrice={product.priceRange.minVariantPrice.amount}
-                    description={product.description}
+                    // description={product.description}
                     imageFluid={product.images[0].localFile.childImageSharp.fluid}
                     key={product.shopifyId}
                     title={product.title}

@@ -5,6 +5,6 @@ export const CategoryFilterItemWrapper = styled.div`
   margin-top: 10px;
   cursor: pointer;
   > div:last-child {
-    padding-left: 8px;
+    padding-left: 15px;
   }
 `;

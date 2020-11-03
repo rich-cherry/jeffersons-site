@@ -8,18 +8,25 @@ export const ProductTileWrapper = styled.div`
   border-top-left-radius: 5px;
   overflow: hidden;
   flex-direction: column;
-  margin: 20px;
+ 
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   > ${StyledLink} {
-    border: 1px solid black;
+    border: 1px solid #AEA079;
+    margin: 10px;
     text-decoration: none;
     display: block;
     padding: 10px;
     text-align: center;
     font-weight: bold;
     color: black;
+    :hover {
+      background: #AEA079;
+      color: white;
+      transition: all 0.5s ease;
+    }
   }
   :hover {
+    
     opacity: 0.5;
     transition: all 0.5s ease;
   }
