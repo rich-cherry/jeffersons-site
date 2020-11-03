@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
 
 const fullWidthStyles = ({ fullWidth }) => {
-    if (fullWidth) {
-        return css`
+  if (fullWidth) {
+    return css`
       display: block;
       width: 100%;
     `;
-    }
+  }
 };
 
 export const Button = styled.button`
@@ -16,7 +16,9 @@ export const Button = styled.button`
   line-height: 44px;
   box-shadow: none;
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;

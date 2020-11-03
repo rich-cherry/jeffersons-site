@@ -2,13 +2,20 @@ import styled from 'styled-components';
 import { StyledLink } from '../StyledLink';
 
 export const CollectionTileWrapper = styled.div`
-  height: 300px;
+  height: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 15px;
   max-height: 100vh;
   display: flex;
   position: relative;
-  margin-bottom: 5px;
+  opacity: 1;
   > div {
     flex-grow: 1;
+    
+  }
+  :hover {
+    opacity: 0.5;
+    transition: all 0.5s ease;
   }
 `;
 
@@ -18,7 +25,7 @@ export const CollectionTileContent = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 100%;
+  width: 25%;
   height: 100%;
   color: white;
   text-decoration: none;
@@ -32,7 +39,7 @@ export const CollectionTileContent = styled.div`
       border: 1px solid black;
       font-weight: bold;
       font-size: 16px;
-      text-transform: uppercase;
+  
       display: inline-block;
       color: black;
       text-decoration: none;
@@ -47,13 +54,15 @@ export const CollectionTileContent = styled.div`
 
 export const Title = styled.div`
   padding: 5px 10px;
-  margin-bottom: 5px;
+
   display: inline-block;
-  text-transform: uppercase;
-  font-size: 40px;
+  letter-spacing: 3px;
+  font-family: monotype-modern-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
   background: ${props => (props.sale ? 'red' : 'none')};
 `;
 

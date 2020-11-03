@@ -8,14 +8,20 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
   }
   body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.2;
+    background-color: #f8f8f8;
   }
   strong{
     font-weight: bold;
   }
   h1,h2,h3,h4,h5,h6{
     margin: 20px 0;
+    font-family: monotype-modern-display, sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   h1{
     font-size: 3em;

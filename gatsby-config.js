@@ -9,6 +9,12 @@ module.exports = {
     author: `Rich Cherry`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: { id: 'fpb3nmo' }
+      }
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-optional-chaining`,
     {
