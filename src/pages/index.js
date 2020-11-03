@@ -4,7 +4,9 @@ import {
   SEO,
   HomepageCollectionsGrid,
   FeaturedProducts,
-  AnnouncementBar
+  AnnouncementBar,
+  Intro,
+  Footer
 } from 'components';
 import ProductContext from 'context/ProductContext';
 
@@ -15,8 +17,8 @@ const IndexPage = () => {
     <div>
       <AnnouncementBar />
       <Layout>
-
         <SEO description="Jefferson Florist" title="Homepage" />
+        <Intro />
         <HomepageCollectionsGrid
           collections={
             collections.filter(
@@ -28,6 +30,7 @@ const IndexPage = () => {
           collection => collection.title === 'Featured'
         ) && <FeaturedProducts />}
       </Layout>
+      <Footer />
     </div>
   );
 };

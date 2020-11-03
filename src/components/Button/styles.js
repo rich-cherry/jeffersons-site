@@ -31,6 +31,7 @@ export const Button = styled.button`
     color: white;
     background: black;
     border: 1px solid rgba(0, 0, 0, 0);
+    transition: all 0.4s ease;
   }
   &:disabled {
     border-color: #999;

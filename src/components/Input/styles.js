@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Input = styled.input`
-  border: 1px solid #ccc;
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: block;
   font-size: 16px;
   font-family: futura-pt, sans-serif;

@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
   }
   body{
-    font-family: futura-pt, sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.2;
@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   h1,h2,h3,h4,h5,h6{
     margin: 20px 0;
-    font-family: monotype-modern-display, sans-serif;
+    font-family: 'Amiri', serif;
     font-weight: 400;
     font-style: normal;
   }

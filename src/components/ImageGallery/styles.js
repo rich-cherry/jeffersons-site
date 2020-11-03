@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const ImageGalleryWrapper = styled.section`
   > div:first-child {
-    border: 5px solid #ccc;
+    border: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
   > div:last-child {
     margin-top: 5px;

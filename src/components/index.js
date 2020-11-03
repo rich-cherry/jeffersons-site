@@ -16,3 +16,5 @@ export * from './Filters';
 export * from './Checkbox';
 export * from './Search';
 export * from './AnnouncementBar';
+export * from './Intro';
+export * from './Footer';

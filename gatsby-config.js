@@ -21,6 +21,11 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
+          `Amiri\:400`,
+          `Amiri\:700`,
+          `Nanum Gothic\:400`,
+          `Nanum Gothic\:700`,
+          `Nanum Gothic\:800`,
           `open sans\:400`,
           'open sans:400i',
           `open sans\:700`,
@@ -57,7 +62,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        // icon: `src/images/gatsby-icon.png`,
       },
     },
   ],

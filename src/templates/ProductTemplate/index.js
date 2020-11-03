@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-onchange */
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Layout, ImageGallery, ProductQuantityAdder } from 'components'
+import { Layout, ImageGallery, ProductQuantityAdder, Footer } from 'components'
 import { Grid, SelectWrapper, Price } from './styles'
 import CartContext from 'context/CartContext';
 import { navigate, useLocation } from '@reach/router';
@@ -56,7 +56,7 @@ export default function ProductTemplate(props) {
                         <>
                             {product?.variants.length > 1 && (
                                 <SelectWrapper>
-                                    <strong>Variant</strong>
+                                    <strong>Options</strong>
                                     <select
                                         value={selectedVariant.id}
                                         onChange={handleVariantChange}
@@ -88,6 +88,7 @@ export default function ProductTemplate(props) {
                     />
                 </div>
             </Grid>
+            <Footer />
         </Layout>
     )
 }
